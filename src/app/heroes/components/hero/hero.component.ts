@@ -25,4 +25,9 @@ export class HeroComponent {
   changeAge(value: number): void {
     this.age = value;
   }
+
+  resetHero(): void {
+    this.name = 'spiderman';
+    this.age = 30;
+  }
 }

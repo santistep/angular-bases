@@ -13,7 +13,16 @@
   <dd>{{ capitalizeName }}</dd>
 </dl>
 
-<button class="btn-btn-primary" (click)="changeHero('ironman')">
+<button
+  *ngIf="name !== 'ironman'"
+  class="btn-btn-primary"
+  (click)="changeHero('ironman')"
+>
   Cambiar Nombre
 </button>
-<button class="btn-btn-primary" (click)="changeAge(45)">Cambiar Edad</button>
+
+<button *ngIf="age !== 45" class="btn-btn-primary" (click)="changeAge(45)">
+  Cambiar Edad
+</button>
+
+<button class="btn-btn-primary" (click)="resetHero()">Reset</button>
